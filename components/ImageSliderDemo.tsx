@@ -5,9 +5,9 @@ import { ImagesSlider } from "./ui/image-slider";
 
 export function ImagesSliderDemo() {
   const images = [
-    "https://images.unsplash.com/photo-1485433592409-9018e83a1f0d?q=80&w=1814&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1483982258113-b72862e6cff6?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1482189349482-3defd547e0e9?q=80&w=2848&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://utfs.io/f/6e80f992-7502-4583-b49f-3116fd4ad486-8sfhbl.jpg",
+    "https://utfs.io/f/4e29749d-d528-4cd7-a609-01f382947b29-d1yw5y.jpg",
+    "https://utfs.io/f/45f0e89e-0ec5-4347-be73-b8176d9dee9b-2s2fli.jpg",
   ];
   return (
     <ImagesSlider className="h-[100vh]" images={images}>
