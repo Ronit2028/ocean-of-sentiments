@@ -5,7 +5,7 @@ import { cn } from "@/utils/cn";
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpotify, faApple, faYoutube, faInstagram, faAmazon } from '@fortawesome/free-brands-svg-icons';
-
+import Link from "next/link";
 
 
 import logo from '@/assets/brand/ts-logo.png'
@@ -31,14 +31,16 @@ function Navbar({ className }: { className?: string }) {
             <Image src={logo} width={75} alt="logo" />
           </div>
           <div className="flex flex-wrap gap-5 items-center">
-            <MenuItem setActive={setActive} active={active} item="The Band">
-              <div className="flex flex-col space-y-4 text-sm">
-                <HoveredLink href="/web-dev">Web Development</HoveredLink>
-                <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-                <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-                <HoveredLink href="/branding">Branding</HoveredLink>
-              </div>
-            </MenuItem>
+            <Link href='/about'>
+              <MenuItem setActive={setActive} active={active} item="The Band">
+                <div className="flex flex-col space-y-4 text-sm">
+                  <HoveredLink href="/web-dev">Web Development</HoveredLink>
+                  <HoveredLink href="/interface-design">Interface Design</HoveredLink>
+                  <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
+                  <HoveredLink href="/branding">Branding</HoveredLink>
+                </div>
+              </MenuItem></Link>
+            <Link href='/events'>
             <MenuItem setActive={setActive} active={active} item="Tours & Events">
               <div className="  text-sm grid grid-cols-2 gap-10 p-4">
                 <ProductItem
@@ -66,7 +68,8 @@ function Navbar({ className }: { className?: string }) {
                   description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
                 />
               </div>
-            </MenuItem>
+            </MenuItem></Link>
+            <Link href='/music'>
             <MenuItem setActive={setActive} active={active} item="Music">
               <div className="flex flex-col space-y-4 text-sm">
                 <HoveredLink href="/hobby">Hobby</HoveredLink>
@@ -74,7 +77,7 @@ function Navbar({ className }: { className?: string }) {
                 <HoveredLink href="/team">Team</HoveredLink>
                 <HoveredLink href="/enterprise">Enterprise</HoveredLink>
               </div>
-            </MenuItem>
+            </MenuItem></Link>
           </div>
           <div className="flex items-center">
             <span className="flex gap-3 items-center my-auto">
