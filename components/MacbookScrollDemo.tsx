@@ -10,7 +10,7 @@ export function MacbookScrollDemo() {
       <MacbookScroll
         title={
           <span>
-            This Macbook is built with Tailwindcss. <br /> No kidding.
+             Where soulful melodies meet electrifying beats.
           </span>
         }
         badge={
