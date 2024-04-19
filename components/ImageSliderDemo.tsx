@@ -5,7 +5,7 @@ import { ImagesSlider } from "./ui/image-slider";
 
 export function ImagesSliderDemo() {
   const images = [
-    "https://utfs.io/f/6e80f992-7502-4583-b49f-3116fd4ad486-8sfhbl.jpg",
+    "https://utfs.io/f/f42d2a15-f4e8-47b8-afcb-bb8420929e8c-aee60y.jpg",
     "https://utfs.io/f/4e29749d-d528-4cd7-a609-01f382947b29-d1yw5y.jpg",
     "https://utfs.io/f/45f0e89e-0ec5-4347-be73-b8176d9dee9b-2s2fli.jpg",
   ];
