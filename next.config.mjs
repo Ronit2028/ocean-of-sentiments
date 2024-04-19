@@ -5,6 +5,8 @@ const nextConfig = {
           "assets.aceternity.com",
           "aceternity.com",
           "images.unsplash.com",
+          "utfs.io"
+          
         ]
       }
 };

@@ -6,6 +6,25 @@ import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import Link from "next/link";
 
 export function ThreeDCardDemo() {
+    const jsonData = {
+      "data": [
+        {
+          "image": "https://utfs.io/f/89338636-54f4-4c59-80f1-ac179fadc68a-ax1ioo.jpg",
+          "title": "Title 1",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus, felis non fermentum feugiat, nisi risus fermentum quam, nec dapibus orci turpis ut eros."
+        },
+        {
+          "image": "https://utfs.io/f/adbfe4be-75fa-44bc-a430-8abda1a131dc-8sfhbl.jpg",
+          "title": "Title 2",
+          "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
+        },
+        {
+          "image": "/image3.jpg",
+          "title": "Title 3",
+          "content": "Nulla facilisi. Vivamus eget leo a orci ultrices aliquet. Proin accumsan augue vel turpis posuere, nec sollicitudin enim laoreet."
+        }
+      ]
+    };
   return (
     <CardContainer className="inter-var">
       <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto h-auto rounded-xl p-6 border  ">
@@ -24,7 +43,7 @@ export function ThreeDCardDemo() {
         </CardItem>
         <CardItem translateZ="100" className="w-full mt-4">
           <Image
-            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://utfs.io/f/adbfe4be-75fa-44bc-a430-8abda1a131dc-8sfhbl.jpg"
             height="1000"
             width="1000"
             className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
@@ -50,6 +69,7 @@ export function ThreeDCardDemo() {
           </CardItem>
         </div>
       </CardBody>
+      
     </CardContainer>
   );
 }
