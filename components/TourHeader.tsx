@@ -5,12 +5,12 @@ import { ImagesSlider } from "./ui/image-slider";
 
 export function TourHeader() {
   const images = [
-    "https://images.unsplash.com/photo-1485433592409-9018e83a1f0d?q=80&w=1814&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1483982258113-b72862e6cff6?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1482189349482-3defd547e0e9?q=80&w=2848&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://utfs.io/f/5f233ec4-f4ff-40f3-816b-e06e82648012-c5e95k.jpg",
+    "https://utfs.io/f/6d4ac819-f3aa-40f4-801f-683a9c06b40d-4xxbew.jpg",
+    "https://utfs.io/f/96ce0214-64ca-41a0-872d-ceeefdbf2ad4-4xxbe1.jpg",
   ];
   return (
-    <ImagesSlider className="h-[100vh]" images={images}>
+    <ImagesSlider className="h-[100vh] bg-cover  " images={images}>
       <motion.div
         initial={{
           opacity: 0,
