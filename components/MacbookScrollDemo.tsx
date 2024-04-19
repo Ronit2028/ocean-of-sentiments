@@ -1,6 +1,8 @@
 import React from "react";
 import { MacbookScroll } from "./ui/macbook-scroll";
 import Link from "next/link";
+import logo from '@/assets/brand/ts-logo.png'
+
 
 export function MacbookScrollDemo() {
   return (
@@ -16,7 +18,7 @@ export function MacbookScrollDemo() {
             <Badge className="h-10 w-10 transform -rotate-12" />
           </Link>
         }
-        src={`/linear.webp`}
+        src={`https://images.unsplash.com/photo-1519068737630-e5db30e12e42?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
         showGradient={false}
       />
     </div>
