@@ -6,11 +6,11 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-  <main>
-    <HeroParallaxDemo/>
-    <MacbookScrollDemo/>
-    <LayoutGridDemo/>
-    <InfiniteMovingCardsDemo/>
-  </main>
+    <main>
+      <HeroParallaxDemo />
+      <MacbookScrollDemo />
+      <LayoutGridDemo />
+      <InfiniteMovingCardsDemo />
+    </main>
   );
 }
