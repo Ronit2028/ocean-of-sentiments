@@ -7,9 +7,9 @@ export function LayoutGridDemo() {
     <div className="h-screen py-20 w-full pb-24">
       <p className="text-4xl font-bold text-center py-6">Meet the Masters of Melody</p>
       <p className="text-sm font-bold text-center">Click on the tiles to see the magic</p>
-    
-        <LayoutGrid cards={cards} />
-   
+
+      <LayoutGrid cards={cards} />
+
     </div>
   );
 }

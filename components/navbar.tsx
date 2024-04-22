@@ -40,10 +40,10 @@ function Navbar({ className }: { className?: string }) {
               <MenuItem setActive={setActive} active={active} item="The Band">
                 <div className="  text-sm grid grid-cols-1">
                   <ProductItem
-                    title="Algochurn"
-                    href="https://algochurn.com"
-                    src="https://assets.aceternity.com/demos/algochurn.webp"
-                    description="Prepare for tech interviews like never before."
+                    title="About The Band"
+                    href="/about"
+                    src="https://utfs.io/f/a9a41709-bbf9-460b-86bb-988f1a29af88-8gposf.41.54_36ff9be4.jpg"
+                    description="Know about these musical stars, how their journey started and a lot more."
                   />
                 </div>
               </MenuItem></Link>
@@ -51,10 +51,10 @@ function Navbar({ className }: { className?: string }) {
               <MenuItem setActive={setActive} active={active} item="Tours & Events">
                 <div className="  text-sm grid grid-cols-1">
                   <ProductItem
-                    title="Algochurn"
-                    href="https://algochurn.com"
-                    src="https://assets.aceternity.com/demos/algochurn.webp"
-                    description="Prepare for tech interviews like never before."
+                    title="Live Events Tours & Performances"
+                    href="/events"
+                    src="https://utfs.io/f/660d9547-dda1-474d-a126-94a903d90f8e-8gposf.41.54_e13de2ad.jpg"
+                    description="Know all about the upcoming tours and events and be one the firsts to get the ticket and a chance tp see these music magicians in action."
                   />
                 </div>
               </MenuItem></Link>
@@ -62,10 +62,10 @@ function Navbar({ className }: { className?: string }) {
               <MenuItem setActive={setActive} active={active} item="Music">
                 <div className="  text-sm grid grid-cols-1">
                   <ProductItem
-                    title="Algochurn"
-                    href="https://algochurn.com"
-                    src="https://assets.aceternity.com/demos/algochurn.webp"
-                    description="Prepare for tech interviews like never before."
+                    title="New & Top Releases"
+                    href="/music"
+                    src="https://utfs.io/f/7eebe75a-853b-4c53-911c-86b29760c8ae-8gposf.41.55_d2f1477b.jpg"
+                    description="Discover one of the bests and latest musical creations of this band"
                   />
                 </div>
               </MenuItem></Link>
