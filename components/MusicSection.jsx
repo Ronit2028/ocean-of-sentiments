@@ -12,34 +12,34 @@ const MusicSection = () => {
 
     const songs = [
         {
-            "title": "Song 1",
-            "audio_url": "https://open.spotify.com/track/3yHyiUDJdz02FZ6jfUbsmY?si=32eb28d0e46942f2",
-            "cover_image_url": "https://i.ytimg.com/vi/ur4zlbjjgwY/sddefault.jpg?v=65f221fc",
-            "duration": 239 // Duration in seconds
+            "title": " Baarish Ka Asar",
+            "audio_url": "https://utfs.io/f/1a40c63a-ca5f-4348-be4e-c0402e51dd6f-ux66k3.mp3",
+            "cover_image_url": "https://utfs.io/f/5b3deed2-b9fb-49bb-939b-7f1ee2ff8d20-ugjso5.jpg",
+            "duration": 270 // Duration in seconds
         },
         {
-            "title": "Song 2",
-            "audio_url": "https://www.example.com/song2.mp3",
-            "cover_image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-AwO2Oql889N6ts62tJ4195n4vxzFVRxgp8SPe335aCEZngOP97Rs1sXNIEIkzae0MXI&usqp=CAU",
-            "duration": 180 // Duration in seconds
+            "title": " Dhalti Rahe",
+            "audio_url": "https://utfs.io/f/21bc143c-c3c5-43e0-9cd9-4aec49e54856-ittsli.mp3",
+            "cover_image_url": "https://utfs.io/f/0d246a66-d069-403a-a321-33b8e4ee58b8-5zeqaw.jpeg",
+            "duration": 268 // Duration in seconds
         },
         {
-            "title": "Song 3",
-            "audio_url": "https://open.spotify.com/track/3yHyiUDJdz02FZ6jfUbsmY?si=32eb28d0e46942f2",
-            "cover_image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgFi5DLFx9o487NbzcokUzDQ0gyaIjC0dMjt9gEgjdJzBHYrMLKFxyS_lv2h_2OuQQrWE&usqp=CAU",
-            "duration": 239 // Duration in seconds
+            "title": "Doorie",
+            "audio_url": "https://utfs.io/f/8c25505b-1d7c-4fe5-81c2-62bd08bce5f5-rnd788.mp3",
+            "cover_image_url": "https://utfs.io/f/d20235f8-32ce-4ae6-9856-78d92cd984d6-lxje0m.jpg",
+            "duration": 202 // Duration in seconds
         },
         {
-            "title": "Song 4",
-            "audio_url": "https://open.spotify.com/track/3yHyiUDJdz02FZ6jfUbsmY?si=32eb28d0e46942f2",
-            "cover_image_url": "https://www.example.com/cover1.jpg",
-            "duration": 239 // Duration in seconds
+            "title": "Aisi Woh Baarish",
+            "audio_url": "https://utfs.io/f/ad3d8015-4fac-43f5-b10d-b1e656bf8f4c-tfvbl6.mp3",
+            "cover_image_url": "https://utfs.io/f/3f6df2c7-031d-48a6-afc4-0ccaf4b775db-z2v92w.jpg",
+            "duration": 184 // Duration in seconds
         },
         {
-            "title": "Song 5",
-            "audio_url": "https://open.spotify.com/track/3yHyiUDJdz02FZ6jfUbsmY?si=32eb28d0e46942f2",
-            "cover_image_url": "https://www.example.com/cover1.jpg",
-            "duration": 239 // Duration in seconds
+            "title": "Khabar",
+            "audio_url": "https://utfs.io/f/98dc8682-8683-4b4c-82fb-56eb7930e76a-uukpz1.mp3",
+            "cover_image_url": "https://utfs.io/f/269cf481-2b66-489b-b247-6b0985b36582-xvrrw1.jpg",
+            "duration": 212 // Duration in seconds
         },
         // Add more songs as needed
     ];
@@ -66,15 +66,17 @@ const MusicSection = () => {
 
     const playSong = (songIndex) => {
         setCurrentSongIndex(songIndex);
+        audioRef.current.load(); // Load the new audio
+        audioRef.current.play(); // Start playing the new audio
         setIsPlaying(true);
     }
 
     return (
         <div className='max-w-7xl mx-auto py-12 flex flex-wrap'>
-            <div className="w-full lg:w-1/4">
-                <img src={songs[currentSongIndex].cover_image_url} alt={songs[currentSongIndex].title} className='w-full object-cover h-full' />
+            <div className="w-full lg:w-1/2">
+                <img src={songs[currentSongIndex].cover_image_url} alt={songs[currentSongIndex].title} className='w-[80%] rounded-2xl object-cover h-[100%]' />
             </div>
-            <div className="w-full lg:w-3/4 p-4">
+            <div className="w-full lg:w-1/2 p-4">
                 <p className="text-2xl text-end font-bold pb-5 border-b ">
                     Listen To Our Latest Music
                 </p>
@@ -85,7 +87,7 @@ const MusicSection = () => {
                                 {song.title}
                             </p>
                             <p className="text-sm text-white/50">
-                                Album X
+                                Twin Strings
                             </p>
                         </div>
                         <p className="text-lg font-semibold">
