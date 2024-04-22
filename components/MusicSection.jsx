@@ -64,10 +64,10 @@ const MusicSection = () => {
         return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
     }
 
-    const playSong = (songIndex) => {
+    const playSong = async (songIndex) => {
         setCurrentSongIndex(songIndex);
-        audioRef.current.load(); // Load the new audio
-        audioRef.current.play(); // Start playing the new audio
+        await audioRef.current.load(); // Load the new audio
+        await audioRef.current.play(); // Start playing the new audio
         setIsPlaying(true);
     }
 
@@ -81,7 +81,7 @@ const MusicSection = () => {
                     Listen To Our Latest Music
                 </p>
                 {songs.map((song, index) => (
-                    <div key={index} className='py-4 flex items-center justify-between px-8 border-b border-white/10'>
+                    <div onClick={() => {playSong(index)}} key={index} className='py-4 flex items-center justify-between px-8 border-b border-white/10'>
                         <div>
                             <p className="text-lg font-semibold">
                                 {song.title}
@@ -93,7 +93,7 @@ const MusicSection = () => {
                         <p className="text-lg font-semibold">
                             {formatTime(song.duration)}
                         </p>
-                        <button onClick={() => playSong(index)}>Play</button>
+                        <button onClick={() => {playSong(index)}}>Play</button>
                     </div>
                 ))}
                 <div className='py-4 flex items-center justify-between px-8 border-b border-white/10'>
