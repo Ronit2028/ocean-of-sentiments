@@ -17,7 +17,7 @@ const TheBand = () => {
         },
         {
             imageUrl: "https://utfs.io/f/bdbba06c-14c7-4a4c-99f3-3f8718985787-ygknvc.jpg",
-            desc: "Sagar"
+            desc: "Mohit"
         },
     ];
 
