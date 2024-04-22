@@ -8,19 +8,49 @@ import 'slick-carousel/slick/slick-theme.css';
 const VideoSection = () => {
     const videos = [
         {
-            id: 'VIDEO_ID_1',
+            id: '8kfiaBS9G0Q',
             title: 'Video Title 1',
-            thumbnailUrl: 'https://example.com/thumbnail1.jpg',
+            thumbnailUrl: 'https://youtu.be/8kfiaBS9G0Q?si=B1H25TLou_raY2KV',
         },
         {
-            id: 'VIDEO_ID_2',
+            id: 'Y3UMQx4GAh4',
             title: 'Video Title 2',
-            thumbnailUrl: 'https://example.com/thumbnail2.jpg',
+            thumbnailUrl: 'https://youtu.be/Y3UMQx4GAh4?si=x6XhTBMft9O3vW7Z',
         },
         {
-            id: 'VIDEO_ID_3',
+            id: 'VlyLyBqNvVE',
             title: 'Video Title 3',
-            thumbnailUrl: 'https://example.com/thumbnail3.jpg',
+            thumbnailUrl: 'https://youtu.be/VlyLyBqNvVE?si=VWl31AmIQqqheHuF',
+        },
+        {
+            id: '1W7k3dwfiXY',
+            title: 'Video Title 4',
+            thumbnailUrl: 'https://youtu.be/1W7k3dwfiXY?si=RyUVyCQNxSeIv349',
+        },
+        {
+            id: 'RuLnMn-S7yg',
+            title: 'Video Title 5',
+            thumbnailUrl: 'https://youtu.be/RuLnMn-S7yg?si=J075K0Y3IBEc-3BL',
+        },
+        {
+            id: 'sWGkn3CPlQ4',
+            title: 'Video Title 6',
+            thumbnailUrl: 'https://youtu.be/sWGkn3CPlQ4?si=2ZkGB-2LCOygry0x',
+        },
+        {
+            id: 'PvN_E7yxuBk',
+            title: 'Video Title 7',
+            thumbnailUrl: 'https://youtu.be/PvN_E7yxuBk?si=qd7NpYUB0-XopT5N',
+        },
+        {
+            id: 'nwTPlTwT5Ps',
+            title: 'Video Title 8',
+            thumbnailUrl: 'https://youtu.be/nwTPlTwT5Ps?si=4wfN701YT0r_mvBt',
+        },
+        {
+            id: 'ur4zlbjjgwY',
+            title: 'Video Title 9',
+            thumbnailUrl: 'https://youtu.be/ur4zlbjjgwY?si=qdy6Kk0VRYovm1of',
         },
         // Add more video objects here as needed
     ];
@@ -30,6 +60,8 @@ const VideoSection = () => {
         slidesToShow: 2.5,
         slidesToScroll: 1,
         centerMode: true,
+        autoplay:true,
+        speed:5000,
         centerPadding: '10px',
         responsive: [
             {
@@ -53,10 +85,15 @@ const VideoSection = () => {
         <div className="w-full">
             <Slider {...settings}>
                 {videos.map((video) => (
-                    <div key={video.id.videoId}>
-                        <a href={`https://www.youtube.com/watch?v=${video.id.videoId}`} target="_blank" rel="noopener noreferrer">
-                            <img src={video.thumbnailUrl} className="border p-4" />
-                        </a>
+                    <div className='p-6' key={video.id}>
+                         <iframe
+                            width="100%"
+                            height="315"
+                            src={`https://www.youtube.com/embed/${video.id}`}
+                            title={video.title}
+                            frameBorder="0"
+                            allowFullScreen
+                        ></iframe>
                     </div>
                 ))}
             </Slider>
