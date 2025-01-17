@@ -1,4 +1,5 @@
 import { HeroParallaxDemo } from "@/components/HeroParallaxDemo";
+import { ImagesSliderDemo } from "@/components/ImageSliderDemo";
 import { InfiniteMovingCardsDemo } from "@/components/InfiniteMovingCardsDemo";
 import { LayoutGridDemo } from "@/components/LayoutGridDemo";
 import { MacbookScrollDemo } from "@/components/MacbookScrollDemo";
@@ -8,9 +9,6 @@ export default function Home() {
   return (
     <main>
       <HeroParallaxDemo />
-      <MacbookScrollDemo />
-      <LayoutGridDemo />
-      <InfiniteMovingCardsDemo />
     </main>
   );
 }

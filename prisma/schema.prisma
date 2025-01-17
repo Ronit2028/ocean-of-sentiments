@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Game {
+  id          String          @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  image       String          
+  description String?
+  genre       String
+  reviews     RawReview[]
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+}
+
+model RawReview {
+  id          String          @id @default(auto()) @map("_id") @db.ObjectId
+  content     String
+  gameId      String          @db.ObjectId
+  game        Game            @relation(fields: [gameId], references: [id])
+  processed   ProcessedReview?
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+}
+
+model ProcessedReview {
+  id              String          @id @default(auto()) @map("_id") @db.ObjectId
+  rawReviewId     String          @unique @db.ObjectId
+  rawReview       RawReview       @relation(fields: [rawReviewId], references: [id])
+  sentimentScore  Float           // Score representing sentiment (e.g., -1 to 1)
+  sentimentLabel  String          // e.g., "Positive", "Neutral", "Negative"
+  keywords        String[]        // Array of keywords extracted from the review
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+}
