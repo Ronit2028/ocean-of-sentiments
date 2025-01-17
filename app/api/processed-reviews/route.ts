@@ -8,7 +8,7 @@
   // GET endpoint: Fetch all games
   export async function GET() {
     try {
-      const games = await prisma.game.findMany();
+      const games = await prisma.processedReview.findMany();
       console.log('Fetched games:', games); // Debugging log
       return NextResponse.json(games, { status: 200 });
     } catch (error) {

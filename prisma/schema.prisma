@@ -30,7 +30,8 @@ model RawReview {
 
 model ProcessedReview {
   id              String          @id @default(auto()) @map("_id") @db.ObjectId
-  rawReviewId     String          @unique @db.ObjectId
+  rawReviewId     String   
+  gameId          String       
   rawReview       RawReview       @relation(fields: [rawReviewId], references: [id])
   sentimentScore  Float           // Score representing sentiment (e.g., -1 to 1)
   sentimentLabel  String          // e.g., "Positive", "Neutral", "Negative"

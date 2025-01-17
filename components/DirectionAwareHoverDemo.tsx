@@ -13,7 +13,7 @@ export function DirectionAwareHoverDemo({ imageUrl, desc }: DirectionAwareHoverD
   return (
     <div className="h-[40rem] relative  flex items-center justify-center">
       <DirectionAwareHover imageUrl={imageUrl}>
-        <p className="font-bold text-xl">{desc}</p>
+        <p className="font-bold text-lg">{desc}</p>
       </DirectionAwareHover>
     </div>
   );
